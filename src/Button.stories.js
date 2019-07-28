@@ -1,6 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { Button } from "./Button";
+import { color } from "@storybook/addon-knobs/react";
 
 storiesOf("Button", module)
   .addParameters({
@@ -12,5 +13,5 @@ storiesOf("Button", module)
     }
   })
   .add("with background", () => (
-    <Button bg="palegoldenrod">Hello world</Button>
+    <Button bg={color("bg", "palegoldenrod", "group1")}>Hello world</Button>
   ));
